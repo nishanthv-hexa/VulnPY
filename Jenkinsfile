@@ -45,7 +45,7 @@ pipeline {
 //             sh 'pmd -d -f txt -r rulesets/java/quickstart.xml -reportfile report.txt'}}
         stage ("bandit"){
            steps {
-               sh 'bandit -r /var/lib/jenkins/workspace/VulnPy -f json -o banditResult.json' || true
+               sh 'bandit -r /var/lib/jenkins/workspace/VulnPy -f json -o /var/lib/jenkins/workspace/banditResult.json'
             }}
       stage ("Archery Sync"){
         steps{
