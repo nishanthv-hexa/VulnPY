@@ -49,7 +49,6 @@ pipeline {
             }}
       stage ("Archery Sync"){
         steps{
-        sh 'sudo su'
         sh 'archerysec-cli -h http://localhost:8000 -t sUX5oFWhz5jYYkJ35-Ssv1872d7cd3qN7A2hpeRBVN7Wzayx05r9cG_5k2Lf8XaX --cicd_id=bc1b3b23-40ef-4e96-97e0-4a05fd0f5592 --project=b8296cd8-4717-4ee1-b178-248d5bcbfeb1 --bandit --report_path=$(pwd)'}
         }
 }
