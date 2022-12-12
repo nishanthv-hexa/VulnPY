@@ -47,10 +47,10 @@ pipeline {
            steps {
                sh 'bandit -r /var/lib/jenkins/workspace/VulnPy -f json -o /var/lib/jenkins/workspace/banditResult.json || true'
             }}
-      stage ("Archery Sync"){
-        steps{
-            sh "sudo chmod +x -R /var/lib/jenkins/workspace/VulnPy/banditReport.json"
-        sh 'sudo archerysec-cli -h http://localhost:8000 -t sUX5oFWhz5jYYkJ35-Ssv1872d7cd3qN7A2hpeRBVN7Wzayx05r9cG_5k2Lf8XaX --cicd_id=2b5eceda-75ba-4ad8-a219-4c8da3c72f77 --project=b8296cd8-4717-4ee1-b178-248d5bcbfeb1 --bandit --report_path=/var/lib/jenkins/workspace/VulnPy/'}
-        }
-}
+//       stage ("Archery Sync"){
+//         steps{
+//             sh "sudo chmod +x -R /var/lib/jenkins/workspace/VulnPy/banditReport.json"
+//         sh 'sudo archerysec-cli -h http://localhost:8000 -t sUX5oFWhz5jYYkJ35-Ssv1872d7cd3qN7A2hpeRBVN7Wzayx05r9cG_5k2Lf8XaX --cicd_id=2b5eceda-75ba-4ad8-a219-4c8da3c72f77 --project=b8296cd8-4717-4ee1-b178-248d5bcbfeb1 --bandit --report_path=/var/lib/jenkins/workspace/VulnPy/'}
+//         }
+// }
 }
